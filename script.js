@@ -107,5 +107,12 @@
 
     }
 
+    var checkExist = setInterval(function() {
+        console.log("Waiting for kWidget");
+        if ($(".kWidgetIframeContainer").length) {
+            console.log("Found kWidget, Hooking the keyboard");
+            window.addEventListener("keydown", handle, true);
+            clearInterval(checkExist);
+        }
+     }, 100); 
 
-    window.addEventListener("keydown", handle, true);
