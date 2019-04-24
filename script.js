@@ -73,7 +73,7 @@
             v.sendNotification('playbackRateChangeSpeed', CurrentPlaybackRate ) ;
             console.log("Speed changed to "+ v.playbackRate);
         }
-        if(e.keyCode == 110){//decimal
+        if(e.keyCode == 46){//dot
             CurrentPlaybackRate  = 1;
             v.sendNotification('playbackRateChangeSpeed', 1 ) ;
             console.log("Speed changed to Normal = "+ v.playbackRate);
@@ -114,5 +114,5 @@
             window.addEventListener("keydown", handle, true);
             clearInterval(checkExist);
         }
-     }, 100); 
+     }, 100);
 
